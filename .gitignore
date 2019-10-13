@@ -1,0 +1,29 @@
+### MacSystem ###
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+._*
+
+### Web ###
+
+## env ##
+.envrc
+
+## temp/build ##
+dev/
+dist/
+.tmp/
+temp/
+
+## npm/taskrunners ##
+*.map
+.sass-cache/
+node_modules/
+bower_components/
+npm-debug.log
+
+## taskFile ##
+bs-config.js
+bs.sh
