@@ -1,0 +1,41 @@
+// _typo_set
+
+// Defaults
+$font-set: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+$font-set_Base: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
+
+// Webfonts
+@mixin typo--notosans { font-family: 'Noto Sans', $font-set_Base;}
+@mixin typo--yugothic { font-family: "Yu Gothic", YuGothic, -apple-system, BlinkMacSystemFont, Verdana, Meiryo, "M+ 1p", sans-serif;}
+@mixin typo--axis-r  { font-family: 'AxisStd-Regular', $font-set_Base;}
+@mixin typo--axis-el { font-family: 'AxisStd-ExtraLight', $font-set_Base;}
+@mixin typo--gothic-db { font-family: "Gothic MB101 DemiBold", $font-set_Base;}
+@mixin typo--gothic-b { font-family: "Gothic MB101 Bold", $font-set_Base;}
+@mixin typo--gothic-h { font-family: "Gothic MB101 Heavy", $font-set_Base;}
+
+// Project
+body {
+
+	// OpenType フォントの文字詰
+  font-feature-settings: "palt";
+
+	html[lang='ja'] & {
+    letter-spacing: 0.08em;
+		// letter-spacing: 0.12em;
+	}
+	// html[lang='en'] & {
+	// }
+
+  // リガチャ解除
+  font-variant-ligatures: no-common-ligatures;
+
+  // safari でのフォントの細りを解消する。Retinaでは解除。
+  // http://creator.dwango.co.jp/14128.html
+  //
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: unset;
+  @media only screen and(-webkit-min-device-pixel-ratio: 2),(min-resolution: 2dppx) {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

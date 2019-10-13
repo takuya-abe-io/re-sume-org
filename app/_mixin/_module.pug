@@ -1,0 +1,19 @@
+mixin profileItem(src, title, text)
+  li.section__profile__item
+    p.section__profile__item__image
+      img(src=src alt=title)
+    p.section__profile__item__title!=title
+    p.section__profile__item__text!=text
+
+
+mixin goodsItem(src, title, price="", note="")
+  li.goods__list__item
+    p.goods__list__image
+      a(href=src)
+        img(src=src alt=title)
+    div.goods__list__info
+      p.goods__list__title #{title}
+        if note != ""
+          span.goods__list__note #{note}
+      if price != ""
+        p.goods__list__price #{price}

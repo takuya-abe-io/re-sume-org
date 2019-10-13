@@ -1,0 +1,98 @@
+body {
+	background-color: #fff;
+  color: #111;
+  line-height: 1.6;
+	font-size: 10px;
+	font-family: 'Rajdhani', sans-serif;
+
+	@include mqPC(){
+		font-size: 14px;
+		min-width: 1040px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+body {
+	position: relative;
+	overflow-x: hidden;
+}
+
+.main__article > section {
+	position: relative;
+	background-color: #fff;
+	@include mqSP {
+		box-sizing: border-box;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
+
+hr.content__border {
+
+		@extend %content__border;
+
+		margin-top: 4em;
+		margin-bottom: 4em;
+
+		@include mqPC {
+			margin-top: 70px;
+			margin-bottom: 70px;
+		}
+
+}
+
+/// PAGE VARS
+$maintTxtCol: #111;
+$coler_diff: #444;
+$mainColor: #999;
+$mainColor_light: $mainColor + $coler_diff;
+
+
+a {	color: #111;}
+a:hover { color: $mainColor_light;}
+::selection {
+	background-color: $mainColor;
+	color: #fff;
+}
+p { color: #111; }
+
+// COMMON MOD
+@include mqPC {
+	.gutter-left {
+		margin-left: 5%;
+	}
+	.gutter-right {
+		margin-right: 5%;
+	}
+}
+
+a .icon_arrow {
+	display: block;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 21px;
+	width: 34px;
+	height: 34px;
+	path {
+		fill:#fff;
+	}
+	polygon {
+		fill:#fff;
+	}
+}
+
+
+
+.footer {
+	color: #666;
+	position: absolute;
+	bottom: 0;
+	right: 24px;
+}
+.footer__copyright {
+	text-align: center;
+	padding-bottom: 2em;
+	font-weight: bold;
+}

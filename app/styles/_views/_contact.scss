@@ -1,0 +1,77 @@
+.section__contact {
+	background-color: #e5e5e5 !important;
+	margin-top: 80px;
+	padding-top: 45px;
+	padding-bottom: 45px;
+	@include mqPC {
+		margin-top: 80px;
+		padding-top: 90px;
+		padding-bottom: 90px;
+	}
+}
+.section__contact__container {
+	@extend %section__container;
+	@include mqPC {
+		display: flex;
+	}
+}
+.section__contact__content {
+	+ .section__contact__content {
+		@include mqSP {
+			margin-top: 3em;
+		}
+	}
+	@include mqPC {
+		width: 50%;
+	}
+	p {
+		@include fontStyle(vw(12));
+			@include mqPC {
+			font-size: 12px;
+		}
+	}
+}
+.section__contact__title {
+	font-weight: bold;
+	@include fontStyle(vw(32));
+	margin-bottom: 1.5em;
+
+	@include mqPC {
+		margin-bottom: 50px;
+		font-size: 18px;
+	}
+}
+
+.section__contact__sns__item {
+	margin-top: 2em;
+	+ .section__contact__sns__item {
+		@include mqPC {
+			margin-left: 3em;
+		}
+	}
+}
+.section__contact__sns__item a {
+	display: flex;
+	align-items:center;
+	text-decoration: none;
+	font-size: 12px;
+		svg {
+		width: 100%;
+		height: auto;
+		display: inline-block;
+		width: 30px;
+		height: 30px;
+		margin-right: 1em;
+	}
+}
+
+.section__contact__note {
+	margin-top: 3em;
+}
+.section__contact__sns__list {
+	margin-top: 4em;
+	align-items: center;
+	@include mqPC {
+		display: flex;
+	}
+}

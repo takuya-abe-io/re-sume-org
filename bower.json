@@ -1,0 +1,8 @@
+{
+  "name": "mrlshita-web",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.1",
+    "jquery": "1"
+  }
+}

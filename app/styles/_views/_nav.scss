@@ -1,0 +1,152 @@
+.navigation { // Block
+
+	.btn_hamburger {
+		width: 41px;
+    height: 41px;
+    right: 18px;
+    top: 9px;
+    position: fixed;
+    z-index: 1100;
+    cursor: pointer;
+    mix-blend-mode: difference;
+		@include mqPC {
+			width: 54px;
+			height: 54px;
+			right: 24px;
+			top: 24px;
+		}
+	}
+
+	.btn_hamburger span{
+		display: block;
+		width: 80%;
+		height: 2px;
+		position: absolute;
+		margin: auto;
+		left: 6px;
+		background-color: #fff;
+		z-index: 20;
+		transition: all 200ms ease;
+	}
+	.btn_hamburger :nth-of-type(1) {
+		top: 34%;
+	}
+	.btn_hamburger :nth-of-type(2) {
+		top: 49%;
+	}
+	.btn_hamburger :nth-of-type(3) {
+		top: 63%;
+	}
+
+	// .noTouch & {
+		.btn_hamburger:hover {
+			:nth-of-type(1) {
+				left: 2px;
+			}
+			:nth-of-type(2) {
+				left: 10px;
+			}
+			:nth-of-type(3) {
+				left: 2px
+			}
+		}
+//	}
+
+	// .drawer
+
+	.nav__item_wrap {
+		width: 85%;
+		height: 100%;
+		background: rgba(#111,1.0);
+		position: fixed;
+		right: 0;
+		top: 0;
+		z-index: 1000;
+		transition: all 380ms ease;
+		transform: translate3d(100%,0,0);
+		@include mqPC {
+			width: 50%;
+		}
+	}
+
+	.nav__items {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		height: 100%;
+		padding: 30px 20% 30px 10%;
+		box-sizing: border-box;
+	}
+	.nav__item {
+		position: relative;
+		transform: translateX(20px);
+		opacity: 0;
+		transition: opacity .6s cubic-bezier(.455,.03,.515,.955) ,
+								transform .8s cubic-bezier(.165,.84,.44,1) ;
+		@for $i from 1 through 10 {
+			&:nth-child(#{$i}) {
+			transition-delay: $i*40 + 140 + ms;
+			}
+		}
+	}
+
+	.nav__item a {
+		display: block;
+		font-size: 14px;
+		color:#fff;
+		text-decoration: none;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		letter-spacing: 0.2em;
+		@include mqPC {
+			font-size: 18px;
+			margin-top: 20px;
+			margin-bottom: 20px;
+		}
+	}
+	.sns a {
+		display: inline-block;
+		margin-right: 3em;
+			svg {
+			width: 100%;
+			height: auto;
+			display: inline-block;
+			width: 30px;
+			height: 30px;
+			path {
+				fill:#fff;
+			}
+		}
+	}
+
+	.nav-isOn & {
+		.nav__item_wrap {
+			transform: translate3d(0,0,0);
+		}
+		.nav__item {
+			transform: translateX(0px);
+			opacity: 1;
+		}
+		.btn_hamburger {
+			:nth-of-type(1) {
+				transform: translateY(20px) rotate(-45deg);
+				top: 2%;
+				@include mqPC {
+					top: 13%;
+				}
+			}
+			:nth-of-type(2) {
+				left: 200px;
+				opacity: 0;
+			}
+			:nth-of-type(3) {
+				transform: translateY(-20px) rotate(45deg);
+				top: 98%;
+				@include mqPC {
+		    	top: 87%;
+				}
+			}
+		}
+	}
+
+} // END // Block

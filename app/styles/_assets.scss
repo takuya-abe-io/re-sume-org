@@ -1,0 +1,149 @@
+%section {
+
+}
+%section__container {
+	@include mqPC{
+		max-width: 1052px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+%section__title {
+	position: relative;
+	font-weight: bold;
+
+	@include mqSP{
+		margin-bottom: 40px;
+	}
+	@include mqPC{
+		font-size: 32px;
+		font-weight: bold;
+	}
+
+	.section__title__shadow {
+		@include letter-spacing(50);
+		font-family: 'northregular';
+		font-weight: normal;
+		color: #e5e5e5;
+		position: absolute;
+		bottom: 0;
+		z-index: 0;
+		line-height: 0.79;
+		display: block;
+		left: -0.5em;
+		font-size: vw(74);
+		@include mqPC {
+			left: -1em;
+			font-size: 74px;
+		}
+	}
+
+	.section__title__name {
+		color: $fontColor;
+		position: relative;
+		line-height: 1;
+		display: block;
+		font-size: 18px;
+		@include mqPC {
+			font-size: 32px;
+			font-weight: bold;
+		}
+	}
+}
+
+%content__title {
+	@include mqSP {
+		margin-top: 2em;
+	}
+	font-size: 14px;
+	@include mqPC{
+		font-size: 16px;
+		font-weight: bold;
+	}
+}
+
+%content__border {
+	border: none;
+	height: 1px;
+	width: 40%;
+	background-color: $fontColor;
+	margin-right: auto;
+	margin-left: 0;
+
+	@include mqPC{
+		height: 2px;
+		width: 138px;
+	}
+}
+
+%section__border {
+	@include mqSP{
+		margin-top: 4em;
+		margin-bottom: 4em;
+	}
+	background-image: url("/images/hr_mark.svg");
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+	height: 14px;
+}
+
+%title__box {
+	@extend %title__box__border;
+	@include fontStyle(vw(18));
+	text-align: center;
+	padding: 0.7em 0;
+	line-height: 1;
+	@include mqPC {
+		width: 242px;
+		font-size: 18px;
+	}
+}
+%title__box__border {
+	border: solid 1px #000;
+}
+
+%list__indent {
+	margin-left: -1.25em;
+	text-indent: 1.25em;
+}
+
+%list__dot {
+	position: relative;
+	&:before {
+		display: block;
+		content: "・";
+		position: absolute;
+		left: 0.25em;
+		top: 0;
+		width: 1em;
+		height: 1em;
+	}
+}
+%list__asterisk {
+	position: relative;
+	&:before {
+		display: block;
+		content: "※";
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 1em;
+		height: 1em;
+	}
+}
+
+%box__link {
+	line-height: 1;
+	padding: 20px 20px;
+
+	@include mqPC {
+		padding: 30px;
+	}
+
+	a {
+		text-decoration: none;
+	}
+}

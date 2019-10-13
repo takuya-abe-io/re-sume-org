@@ -1,0 +1,40 @@
+.mapwindow__contents {
+
+	padding: 5%;
+	box-sizing: border-box;
+
+	@include mqPC {
+		padding: 78px 0;
+	}
+
+	img {
+		display: inline-block;
+		border: 1px solid #111;
+		line-height: 0;
+		vertical-align: bottom;
+	}
+	max-width: 980px;
+	margin-left: auto;
+	margin-right: auto;
+
+	.maptext {
+		margin-top: 1.5em;
+		font-size: 14px;
+	}
+
+	.btn_w_close {
+		padding-top: 2em;
+		padding-bottom: 2em;
+		a {
+			text-align: center;
+			display: inline-block;
+			width: 100%;
+			padding-top: 1em;
+			padding-bottom: 1em;
+			background: #111;
+			color: #fff;
+			font-weight: bold;
+			text-decoration: none;
+		}
+	}
+}

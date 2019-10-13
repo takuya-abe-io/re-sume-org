@@ -1,0 +1,52 @@
+.section__statement {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	@include mqPC {
+		padding: 78px 0;
+	}
+}
+
+.section__statement__container {
+	@extend %section__container;
+}
+	.section__statement__title {
+		@extend %content__title;
+
+		@include mqPC {
+			text-align: center;
+		}
+	}
+
+	.section__statement__content {
+		@include mqPC {
+			margin-top: 45px;
+		}
+	}
+
+	.section__statement__text {
+		line-height: 2;
+		margin-top: 2em;
+		text-align: justify;
+		@include mqPC {
+			font-size: 14px;
+			color: $fontColor;
+		}
+	}
+
+	.section__statement__note {
+		@include mqPC {
+			font-size: 13px;
+			color: $fontColor;
+		}
+	}
+
+	.section__statement__border {
+		@extend %content__border;
+			margin-top: 4em;
+			margin-bottom: 4em;
+
+		@include mqPC {
+			margin-top: 70px;
+			margin-bottom: 70px;
+		}
+	}

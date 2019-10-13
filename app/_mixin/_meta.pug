@@ -1,0 +1,35 @@
+include ./_og
+include ./_twittercard
+
+meta(charset='UTF-8')
+meta(name='viewport', content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes")
+meta(content="IE=edge", http-equiv="X-UA-Compatible")
+meta(name="keywords" content=keywords)
+meta(name="description" content=description)
+
+//- OG
++og_title(title_share)
++og_description(description)
++og_url(url)
+if content_id == "index"
+  +og_type("website")
+else
+  +og_type("article")
+  
++og_sitename(site_name)
++og_image(ogimage)
+meta(property='fb:app_id' content='')
+
+//- TwitterCard
++tw_title(title_share)
++tw_description(description)
++tw_url(url)
++tw_card("summary_large_image")
++tw_image(ogimage)
+
+link(href="/images/favicon.ico" rel="icon")
+link(href="/images/icon.png" rel="apple-touch-icon")
+
+link(rel="canonical" href=url)
+
+title #{title_tag}

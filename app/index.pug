@@ -1,0 +1,39 @@
+extends _layout/base
+
+block var_block
+  - var title ="Re:sume.org"
+  - var url = "https://re-sume.org/"
+  - var ogimage = url + "/images/og-image.jpg"
+  - var description = "社会課題を解決する「履歴書」を提案します。"
+  - var content_id = 'index'
+  - var site_name = title
+  - var title_tag = title
+  - var title_share = title
+  - var language = "ja"
+
+block style
+  // build:css styles/style.css
+  link(href="styles/style.css" rel='stylesheet' type='text/css' media='all')
+  link(href="//fonts.googleapis.com/css?family=Rajdhani:400,600&display=swap" rel="stylesheet")
+  // endbuild
+
+block script
+  // build:js scripts/scripts.js
+  script(src="script_libs/jquery.easing.js" type="text/javascript")
+  script(src="script_libs/pace.min.js" type="text/javascript")
+  script(src="scripts/scripts.js" type="text/javascript")
+  // endbuild
+  // include ./_include/_ga.html
+
+block content
+  include _views/_header
+  include _views/_nav
+  article#main.main__article
+    //- include _views/_statement
+    //- include _views/_artist
+    //- include _views/_ticket
+    //- include _views/_performance
+    //- include _views/_hita
+    //- include _views/_information
+    //- include _views/_contact
+  include _views/_footer

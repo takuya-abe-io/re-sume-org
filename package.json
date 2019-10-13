@@ -1,0 +1,51 @@
+{
+  "private": true,
+  "name": "dev_sass_set",
+  "version": "1.0.0",
+  "description": "run sass task only",
+  "engines": {
+    "node": ">=4"
+  },
+  "scripts": {
+    "start": "gulp serve",
+    "build": "gulp build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.24.7",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-cache": "^0.4.2",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-cssnano": "^2.0.0",
+    "gulp-eslint": "^3.0.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-ignore": "^2.0.2",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-plumber": "^1.0.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-sass": "^2.0.0",
+    "gulp-sass-glob": "^1.0.9",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-strip-debug": "^1.1.0",
+    "gulp-typescript": "^4.0.1",
+    "gulp-uglify": "^2.0.0",
+    "gulp-useref": "^3.0.0",
+    "gulp-util": "^3.0.8",
+    "gulp-webpack": "^1.5.0",
+    "minimist": "^1.2.0",
+    "npm": "^3.10.10",
+    "run-sequence": "^1.2.2"
+  }
+}

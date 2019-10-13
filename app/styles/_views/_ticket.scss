@@ -1,0 +1,331 @@
+.section__ticket {
+		margin-top: 80px;
+		padding-bottom: 45px;
+	@include mqPC {
+		margin-top: 160px;
+		padding-bottom: 90px;
+	}
+}
+
+.plan__title-note {
+	display: inline-block;
+	background-color: #111;
+	color: #fff;
+	margin-left: 1.5em;
+	padding: 0.5em 1em;
+	margin-top: 1.0em;
+	@include mqPC {
+		margin-top: 0em;
+		margin-left: 1.5em;
+	}
+}
+.section__ticket__container {
+	@extend %section__container;
+}
+
+	.section__ticket__title {
+		@extend %section__title;
+
+		.section__title__shadow {
+			@include mqPC {
+				left: -0.5em;
+			}
+		}
+	}
+
+	.section__ticket__message {
+		@include mqPC {
+			margin-top: 85px;
+		}
+	}
+
+	.section__ticket__text {
+		@include mqPC {
+			font-size: 16px;
+			line-height: 2;
+		}
+	}
+
+	.section__ticket__note__list {
+			margin-top: 2em;
+
+		@include mqPC {
+			margin-top: 30px;
+		}
+	}
+
+		.section__ticket__note__item {
+			@include fontStyle(vw(13));
+			@include mqPC {
+				font-size: 13px;
+			}
+		}
+
+
+	.section__ticket__plan {
+			margin-top: 40px;
+		@include mqPC {
+			margin-top: 70px;
+		}
+	}
+
+		.section__ticket__plan__title {
+			@include fontStyle(vw(18));
+			text-align: center;
+			line-height: 1;
+			position: relative;
+			display: block;
+				padding: 9px 0;
+			@include mqPC {
+				font-size: 18px;
+				padding: 18px 0;
+			}
+
+			&:before, &:after {
+				content: "";
+				position: absolute;
+				left: 0;
+				height: 1px;
+				width: 100%;
+				background-color: #000;
+			}
+
+			&:before {
+				top: 0;
+			}
+
+			&:after {
+				bottom: 0;
+			}
+		}
+
+		.section__ticket--note {
+			.frame {
+				// display: inline-block;
+				text-align: center;
+				background-color: #111;
+				padding: 1em 1em;
+				color: #fff;
+			}
+		}
+		.section__ticket__plan__container {
+			&.is-disabled {
+				.section__ticket__plan__content {
+					text-decoration: line-through;
+					opacity: 0.6;
+				}
+			}
+			@include mqPC {
+				margin-top: 50px;
+			}
+		}
+
+		.section__ticket__plan__header {
+			margin-top: 30px;
+
+			@include mqPC {
+				display: flex;
+				align-items: center;
+				margin-bottom: 30px;
+			}
+		}
+
+		.section__ticket__plan__title__label {
+			@extend %title__box;
+
+			@include mqPC {
+				margin-right: 70px;
+			}
+		}
+
+		.section__ticket__plan__title__note {
+			@include fontStyle(vw(14));
+			@include mqSP {
+				margin-top: 1em;
+			}
+			@include mqPC {
+				font-size: 14px;
+			}
+		}
+
+
+		// .section__ticket__plan__content
+		.section__ticket__plan__content {
+			background-color: #f5f5f5;
+			margin-top: 1.5em;
+			padding: 14px 5%;
+
+			@include mqPC {
+				display: flex;
+				margin-top: 5px;
+				padding: 28px 21px;
+			}
+		}
+			.section__ticket__plan__content__title {
+				display: flex;
+				align-items: baseline;
+				@include mqSP {
+					margin-bottom: 1em;
+				}
+				@include mqPC {
+					width: 25%;
+				}
+			}
+
+			.section__ticket__plan__content__title__symbol {
+				@include fontStyle(vw(40), #999999);
+				font-family: 'northregular';
+				line-height: 1;
+				width: 0.9em;
+				position: relative;
+				bottom: -0.1em;
+				@include mqSP {
+					margin-right: 0.5em;
+				}
+				@include mqPC {
+					font-size: 40px;
+					margin-right: 10px;
+				}
+			}
+			.section__ticket__plan__content__title__name {
+				@include fontStyle(vw(24));
+				display: block;
+				line-height: 1.25;
+				font-weight: bold;
+				@include mqPC {
+					font-size: 17px;
+					margin-top: -0.35em;
+				}
+			}
+
+			.section__ticket__plan__content__info {
+				@include mqPC {
+					width: 40%;
+				}
+			}
+
+			.section__ticket__plan__content__info__text {
+				@include fontStyle(vw(16));
+				display: block;
+				@include mqPC {
+					font-size: 13px;
+					margin-top: 0.25em;
+
+					&:first-child {
+						margin-top: 0;
+					}
+				}
+			}
+
+				.section__ticket__plan__content__info__label {
+					color: $fontColor;
+					font-weight: bold;
+				}
+
+				.section__ticket__plan__content__info__text__note {
+					@include fontStyle(vw(10));
+					@include mqPC {
+						font-size: 10px;
+					}
+				}
+
+				.section__ticket__plan__content__info__note {
+					@include fontStyle(vw(11));
+					margin-top: 0.5em;
+					@include mqPC {
+						font-size: 11px;
+					}
+				}
+
+	.section__ticket__plan__content-e {
+		.section__ticket__plan__content__title {
+			align-items: center;
+		}
+	}
+
+
+	// .section__ticket__jtb
+	.section__ticket__jtb {
+			margin-top: 3em;
+		@include mqPC {
+			margin-top: 65px;
+		}
+	}
+
+	.section__ticket__jtb__title {
+
+		a {
+			position: relative;
+			display: block;
+			@extend %box__link;
+			background-color: #111;
+			box-sizing: border-box;
+			text-decoration: none;
+			width: 100%;
+			font-weight: bold;
+			@include fontStyle(vw(27), #FFF);
+			@include mqPC {
+				font-size: 18px;
+				transition: all 110ms ease;
+				&:hover {
+					background-color: #3B4286;
+				}
+			}
+		}
+	}
+
+	.section__ticket__jtb__text {
+		@include fontStyle(vw(14));
+		padding-top: 1.5em;
+		padding-left: 1.5em;
+		@include mqPC {
+			font-size: 14px;
+		}
+	}
+
+	// .section__ticket__jtb__container
+	.section__ticket__jtb__container {
+		@include mqPC {
+			display: flex;
+			margin-top: 110px;
+		}
+	}
+		.section__ticket__jtb__content {
+			@include mqSP {
+				margin-top: 4em;
+			}
+			@include mqPC {
+				width: 50%;
+			}
+		}
+
+		.section__ticket__jtb__content__title {
+			@extend %content__title;
+			margin-bottom: 2.5em;
+		}
+
+		.section__ticket__jtb__content__item {
+			@extend %list__dot;
+			@include fontStyle(vw(14));
+			line-height: 2;
+			padding-left: 1.25em;
+			@include mqPC {
+				font-size: 14px;
+			}
+		}
+
+		.section__ticket__jtb__content__text {
+			@include fontStyle(vw(14));
+			line-height: 2;
+			@include mqPC {
+				font-size: 14px;
+			}
+		}
+
+		.section__ticket__jtb__content__border {
+			@extend %content__border;
+
+			@include mqPC {
+				margin-bottom: 60px;
+			}
+		}

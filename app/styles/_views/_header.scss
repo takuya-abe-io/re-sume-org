@@ -1,0 +1,53 @@
+// _top
+
+html,body {
+	height: 100%;
+}
+
+body.index {}
+
+
+.header__title {
+	font-weight:400;
+	position: absolute;
+	top: 50%;
+	left:8%;
+	transform: translateY(-50%);
+	line-height: 1;
+	font-size: 4rem;
+	@include mqPC {
+		font-size: 10rem;
+	}
+}
+
+.header__title {
+	opacity: 0;
+	transition: all 320ms ease;
+}
+.header__title .co > span{
+	opacity: 0;
+	transition: all 320ms ease;
+	transition-delay: 480ms;
+}
+
+
+.pace-done {
+	.header__title {
+		opacity: 1;
+	}
+	.header__title .co > span{
+		opacity: 1;
+	}
+}
+
+.header__title .co {
+  animation: Flash1 1800ms infinite;
+}
+
+
+
+@keyframes Flash1{
+  50%{
+    opacity: 0;
+  }
+}

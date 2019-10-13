@@ -1,0 +1,24 @@
+block var_block
+
+doctype html
+
+html(lang=language data-content=content_id)
+
+  head
+    include ../_mixin/_meta
+    
+    block style
+
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous")
+    // script(src="//typesquare.com/3/tsst/script/ja/typesquare.js?5YYAC0xT8Kg%3D" type="text/javascript" charset="utf-8")
+
+    block script
+
+  body(class=content_id)
+
+    block content
+    //- include ../_views/_header
+    //- include ../_views/_nav
+    //- article#main.main__article
+
+    //- include ../_views/_footer

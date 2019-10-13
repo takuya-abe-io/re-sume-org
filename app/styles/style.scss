@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/* CSS Document */
+
+// RESET
+@import "normalize";
+@import "reset_add";
+@import "typo_set";
+@import "fonts";
+
+// VERS
+$BreakPoint_Size: 767;
+$BreakPoint: $BreakPoint_Size + px;
+$spWidth: 94%;
+$fontColor: #111111;
+
+body {
+ background-color: #fff;
+}
+
+img {
+	width: 100%;
+}
+
+// MIXINS
+@import "_mixins";
+@import "_assets";
+
+// PAGE
+@import "_page";
+@import "_views/*";
+
+@import "_pacejs"

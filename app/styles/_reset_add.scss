@@ -1,0 +1,95 @@
+/* =========================================================================
+// add rset for normalize.css
+//========================================================================= */
+
+html {
+// 	text-rendering: optimizeLegibility; // Bug for Chrome48^
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// font-weight Reset
+h1,h2,h3,h4,h5,h6,p,ul,ol,dl,dt,dd,table,pre {
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	font-weight: normal;
+}
+dd {
+	margin-left: 1em;
+}
+
+// inline-items Reset
+li { list-style: none; }
+br { letter-spacing: 0!important; }
+a { color: inherit; }
+img {	-ms-interpolation-mode: bicubic;}
+img {
+	// vertical-align: top; // delete height-space
+}
+ul,ol{ padding: 0;}
+
+// word-break for typo Ja
+p,li,dt,dd,th,td,pre {
+	-ms-line-break: strict;
+	line-break: strict;
+	-ms-word-break: break-strict;
+	word-break: break-strict;
+	word-wrap: break-word;
+}
+
+// youtube
+iframe {
+	border: none;
+}
+
+figure {  margin: 0;}
+* {background-repeat: no-repeat;}
+
+
+
+/* form Styles
+/*------------------------------------------------------------------------------*/
+label, input[type='checkbox'] {
+  cursor: pointer;
+}
+
+select,
+input[type="button"], // iOS でのフォーム初期化
+input[type="text"],
+input[type="submit"],
+input[type="email"],
+textarea,
+button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: none;
+	border-radius: 0;
+	outline:none;
+	background: none;
+}
+
+/* =========================================================================
+// js init helper
+// ========================================================================= */
+
+// js で表示をコントロールする要素で、読込直後は表示はされない要素。
+
+// jsoffの場合・非表示
+.isNone {	display: none!important;
+	.no-js & { display: none!important;}
+}
+// jsoffの場合・表示
+.isHidden { visibility: hidden;
+	.no-js & { visibility: visible;}
+}
+
+/* =========================================================================
+// css helper
+// ========================================================================= */
+
+.unactive {
+	pointer-events: none;
+	opacity: 0.6;
+}
+.uppercase { text-transform: uppercase;}

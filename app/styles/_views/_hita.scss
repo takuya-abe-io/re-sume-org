@@ -1,0 +1,125 @@
+.section__hita {
+		margin-top: 80px;
+		padding-bottom: 45px;
+	@include mqPC {
+		margin-top: 160px;
+		padding-bottom: 90px;
+	}
+}
+.section__hita__contaienr {
+	@extend %section__container;
+}
+
+.section__hita__title {
+	@extend %section__title;
+
+	@include mqPC {
+		margin-bottom: 55px;
+	}
+}
+
+.section__hita--event__title {
+	@include fontStyle(vw(28));
+	margin-top: 90px;
+	@include mqPC {
+		margin-top: 180px;
+		font-size: 28px;
+	}
+}
+.section__hita__container-exhibition01 {
+	flex-direction: row-reverse;
+}
+
+
+.section__hita__container {
+
+	@include mqPC {
+		display: flex;
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+}
+.section__hita__block {
+	@include mqSP {
+		margin-top:4em;
+	}
+
+	@include mqPC {
+		width: 50%;
+	}
+}
+.section__hita__block__title {
+	display: flex;
+	align-items: center;
+	font-weight: bold;
+	@include fontStyle(vw(30));
+	@include mqPC {
+		font-size: 18px;
+	}
+}
+
+	.section__hita__block__title__image {
+		display: block;
+		width: 40px;
+		height: 40px;
+		margin-right: 20px;
+		svg {
+			width:100%;
+			height: auto;
+			path {
+				fill: #000;
+			}
+		}
+		@include mqPC {
+			width: 90px;
+			height: 90px;
+			margin-right: 40px;
+		}
+	}
+
+	.section__hita__block__text {
+
+		@include fontStyle(vw(14));
+		line-height: 2;
+		margin-top: 2em;
+		text-align: justify;
+		text-justify: inter-ideograph;
+		@include mqPC {
+			font-size: 14px;
+			margin-top: 65px;
+		}
+	}
+	.section__hita__block__info {
+		@include fontStyle(vw(14));
+		@include mqPC {
+			font-size: 14px;
+		}
+	}
+
+	.section__hita__block__image {
+		font-size: 0;
+		span {
+			@include fontStyle(vw(16));
+			line-height: 1;
+			margin-top: 0.7em;
+			display: block;
+			@include mqPC {
+				font-size: 13px;
+			}
+		}
+	}
+.section__hita__container {
+	.content__border {
+		@include mqPC {
+			margin-top: 54px;
+			margin-bottom: 54px;
+		}
+	}
+}
+
+.section__hita__block__link {
+	@include fontStyle(vw(14));
+	@include mqPC {
+		font-size: 14px;
+	}
+}

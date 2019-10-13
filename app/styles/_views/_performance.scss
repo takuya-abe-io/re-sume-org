@@ -1,0 +1,102 @@
+.section__hita-performance {
+}
+
+.section__hita-performance__container {
+		margin-top: 80px;
+		padding-bottom: 45px;
+	@include mqSP {
+		padding-top: 40px;
+	}
+	@include mqPC {
+		padding-top: 80px	;
+		padding-bottom: 90px;
+	}
+	@extend %section__container;
+}
+
+ .section__hita-performance__title {
+	@extend %title__box;
+}
+
+.section__hita-performance__text {
+	@include fontStyle(vw(18));
+	@include mqPC {
+		margin-top: 35px;
+		font-size: 18px;
+	}
+}
+
+.section__hita-performance__note__list {
+	margin-top: 2em;
+}
+.section__hita-performance__contaienr {
+	@include mqPC {
+		display: flex;
+		align-items: flex-end;
+	}
+}
+	.section__hita-performance__block {
+		@include mqSP {
+			margin-top: 2em;
+		}
+		@include mqPC {
+			width: 50%;
+		}
+	}
+
+	.section__hita-performance__info {
+		@include fontStyle(vw(13));
+		@include mqPC {
+			font-size: 13px;
+			margin-top: 30px;
+		}
+	}
+
+		.section__hita-performance__info__text {
+			@include fontStyle(vw(13));
+			line-height: 1.8;
+			@include mqPC {
+				font-size: 13px;
+			}
+
+			span {
+				font-weight: bold;
+			}
+		}
+
+		.section__hita-performance__note__item {
+			@extend %list__asterisk;
+			@include fontStyle(vw(13));
+			line-height: 2;
+			padding-left: 1.25em;
+			@include mqPC {
+				font-size: 13px;
+			}
+
+			span {
+				font-weight: bold;
+			}
+		}
+
+	.section__hita-performance__link {
+
+		a {
+			position: relative;
+			display: block;
+			@extend %box__link;
+			background-color: #000;
+			box-sizing: border-box;
+			text-decoration: none;
+			width: 100%;
+			font-weight: bold;
+			transition: all 140ms ease;
+
+			@include fontStyle(vw(16), #FFF);
+			@include mqPC {
+				font-size: 16px;
+				&:hover {
+					background-color: #3B4286;
+				}
+			}
+		}
+	}
